@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueLamp</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div id="all_parent">
+       
+       <div class="nav_parent">
+       
+        <nav>
+          
+
+         <div id="child1" class="child">           
+             <!-- <img src="images/menu.png" alt="menu" class="menu_img" onclick="oncilckbutton()" id="menu" >  -->
+             <button class="menu__button" onclick="menubutton()" id="menu">
+                <span id="span_toogle1" class="span_toogle"></span>
+                <span id="span_toogle2" class="span_toogle"></span>
+                <span id="span_toogle3" class="span_toogle"></span>
+             </button>       
+                       
+             <!-- <img src="images/logo.png" alt="logo" class="logo"> -->
+
+             <span class="logo">LAMPS</span>
+        </div> 
+
+        <div class="span_toggle_res">
+        <button type="button" onclick="toggleResBtn()" id="btn_res"><span></span></button> 
+    </div>
+        
+
+         <div id="child2" class="child"> <ul class="ul">
+            <li class="list"><a href="">Home</a></li>
+            <li class="list"><a href="">About us </a></li>
+            <li class="list"><a href="">Contact</a></li>
+            <li class="list"><a href="">Others</a></li>
+
+        </ul>
+    
+       
+       <button type="button" onclick="toggleBtn()" id="btn" class="button_res"><span></span></button> 
+        </div>
+    
+    
+        
+
+
+
+
+
+
+        </nav>
+    
+    </div>
+
+    <!-- responsive div -->
+   <div class="reponsiv_div_perant">
+    <div class="res_child" id="list">
+        
+        <ul class="res_ul" id="res_list">
+        <li class="res_list"><a class="res_a" href="">Home</a></li>
+        <li class="res_list"><a class="res_a" href="">About us </a></li>
+        <li class="res_list"><a class="res_a" href="">Contact</a></li>
+        <li class="res_list"><a class="res_a" href="">Others</a></li>
+
+    </ul>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+        <!-- second container -->
+        <div class="second_container">
+    <div class="lamp_container">
+        <div class="child_lamp_container">
+        <img src="images/lamp.png" alt="lamp" class="lamp">
+        
+        <div class="childres_light"><img src="images/light.png" alt="light" class="light" id="light"></div>
+    </div>
+
+
+    </div>
+    <div class="text_container">
+    <div class="child_text_container">
+        <h1 class="text_h1">Latest In Lighting</h1>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, praesentium ut quas similique officiis corrupti.  </p>
+        <a href="" class="a_collection">Check All Collection</a>
+        
+    </div> 
+    <div class="control">
+        <p>04</p>
+        <div class="line"><span></span></div>
+        <p>05</p>
+    </div>
+    </div>    
+    </div>
+</div>
+
+
+
+
+
+
+<script>
+    var btn = document.getElementById("btn")
+    var light = document.getElementById("light")
+
+    function toggleBtn(){
+        btn.classList.toggle("active")
+        light.classList.toggle("on")
+    }
+
+
+    // responsive toggle
+
+    var btn_res = document.getElementById("btn_res")
+    var light = document.getElementById("light")
+
+    function toggleResBtn(){
+        btn_res.classList.toggle("res_active")
+        light.classList.toggle("res_on")
+    }
+
+    // var menu = document.getElementById("menu")
+    // function oncilckbutton(){
+    //     menu.classList.toggle("ul")
+    // }  
+
+    var menu = document.getElementById("menu")
+    var list = document.getElementById("list")
+    function menubutton(){
+        menu.classList.toggle("show")
+        list.classList.toggle("listul")
+    }
+
+</script>
+</body>
+</html>
